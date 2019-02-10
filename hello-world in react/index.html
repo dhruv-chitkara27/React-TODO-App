@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="./react.development.js"></script>
+  <script src="./react-dom.development.js"></script>  <script type="text/javascript">
+  console.log('it is working');
+  const mountElement = document.getElementById("root");
+  //Class Component
+  class MySecondComponent extends React.Component {
+    render() {
+      return React.createElement(MyComponent)
+    }
+  }
+
+  // SFC
+
+  const MyComponent = () => React.createElement('h3', null, 'Hello!');
+
+  ReactDOM.render(
+    React.createElement(MySecondComponent),
+    mountElement,
+  )
+  </script>
+</body>
+</html>
