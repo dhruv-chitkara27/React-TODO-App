@@ -21,34 +21,13 @@ const TodoItem = props => (
   </Table.Row>
 )
 
-class Counter extends Component {
-  state = {
-    counter: 0,
-    active: false,
-  }
-
-  render() {
-    const {counter} = this.state //const counter = this.state.counter
-    return (
-    <button
-    onClick={() => {
-      this.setState({
-      counter: counter + 1,
-    })
-  }}>
-    You have clicked {this.state.counter} times!
-    </button>
-  )
-  }
-}
-
 class App extends Component {
   state = {
     todos: [
-      'Learn React',
-      'Learn Redux',
-      'Learn React Native',
-      'Create a brand new web app!',
+      {title: 'Learn React', completed: false},
+      {title: 'Learn Redux', completed: false},
+      {title: 'Learn React Native', completed: false},
+      {title: 'Create a brand new web app!', completed: false}
     ],
   }
 
@@ -57,7 +36,6 @@ class App extends Component {
     return (
       <div className="app">
       <div className="todo-container">
-      <Counter/>
           <input
           id="new-todo"
           className="new-todo"
@@ -78,9 +56,36 @@ class App extends Component {
           </Table.Header>
           <Table.Body>
           {this.state.todos.map((todo, i) => (
-            <TodoItem>
-              {todo}
-            </TodoItem>
+            <Table.Row
+            key={i}
+            positive={todo.completed}
+            >
+            <Table.Cell>
+              <Checkbox
+              checked={todo.completed}
+              onChange={() => {
+                const {completed} = todo
+                const [...todos] = this.state.todos
+                console.log({ todos })
+                todos[i] = {
+                  ...todo,
+                  completed: !completed,
+                }
+                this.setState({ todos })
+              }}
+              />
+            </Table.Cell>
+            <Table.Cell>
+              {todo.title}
+              <Button
+                color="red"
+                icon="trash"
+                floated="right"
+                compact
+                size="small"
+              />
+            </Table.Cell>
+            </Table.Row>
         ))}
         </Table.Body>
         </Table>
