@@ -26,3 +26,5 @@ export const TodoItem = props => {
       </Table.Cell>
     </Table.Row>
 )}
+
+export default TodoItem
