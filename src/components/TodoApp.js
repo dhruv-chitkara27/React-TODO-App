@@ -9,10 +9,6 @@ class TodoApp extends Component {
       { title: 'Learn React', completed: false },
       { title: 'Learn Redux', completed: false },
       { title: 'Learn React Native', completed: false },
-      {
-        title: 'Create a brand new web app!',
-        completed: false,
-      },
     ],
     newTodo: '',
   }
