@@ -16,6 +16,10 @@
     "eject": "react-scripts eject",
     "prod": "node server.js"
   },
+  "engines": {
+    "node": "8.10.0",
+    "npm": "3.5.2"
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
