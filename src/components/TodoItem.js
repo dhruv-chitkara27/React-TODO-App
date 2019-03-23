@@ -4,9 +4,7 @@ import { Table, Checkbox, Button } from 'semantic-ui-react'
 export const TodoItem = props => {
   const { todo, handleDelete, handleToggle } = props
   return (
-    <Table.Row
-      positive={todo.completed}
-    >
+    <Table.Row positive={todo.completed}>
       <Table.Cell>
         <Checkbox
           checked={todo.completed}
@@ -25,6 +23,7 @@ export const TodoItem = props => {
         />
       </Table.Cell>
     </Table.Row>
-)}
+  )
+}
 
 export default TodoItem
