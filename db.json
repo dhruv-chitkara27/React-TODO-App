@@ -1,24 +1,19 @@
 {
   "todos": [
     {
-      "id": "0",
       "title": "Learn React",
-      "completed": false
+      "completed": true,
+      "id": 1
     },
     {
-      "id": "1",
       "title": "Learn Redux",
-      "completed": false
+      "completed": true,
+      "id": 2
     },
     {
-      "id": "2",
       "title": "Learn React Native",
-      "completed": false
-    },
-    {
-      "title": "feqf",
-      "completed": false,
-      "id": "Wus2oHJ"
+      "completed": true,
+      "id": 3
     }
   ]
 }
