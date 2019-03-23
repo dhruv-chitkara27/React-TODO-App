@@ -2,6 +2,7 @@
   "name": "react-todo-app",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:4500",
   "dependencies": {
     "json-server": "^0.12.1",
     "react": "^16.2.0",
@@ -18,5 +19,9 @@
     "server": "json-server --watch db.json --port 4500",
     "eject": "react-scripts eject",
     "prod": "node server.js"
+  },
+  "engines": {
+    "node": "8.10.0",
+    "npm": "3.5.2"
   }
 }
